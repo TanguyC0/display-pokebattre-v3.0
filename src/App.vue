@@ -24,7 +24,7 @@
     <div class="h-full portrait:hidden">
         <Hero />
         {{ centerDisplay }}
-        <main class="flex h-[92%]">
+        <main class="flex h-[91%]">
             <Glass class="w-1/12 my-5 flex-col">
                 <Logo :image="'aventure'" >Adventure</Logo>
                 <Logo :image="'team'" @click="centerDisplay = 'team'" >Team</Logo>
@@ -38,7 +38,7 @@
                 <Shop v-if="centerDisplay == 'shop'" @back="(msg) => centerDisplay = msg"/>
                 <Box v-if="centerDisplay == 'box'" @back="(msg) => centerDisplay = msg"/>
                 <div v-if="centerDisplay == 'home'" class="h-full flex justify-center items-center">
-                    <img  src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/1.png" alt="">
+                    <img class="max-h-1/2 h-1/2" src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/1.png" alt="">
                 </div>
             </section>
             <Glass class="w-1/12 my-5 flex-col">
