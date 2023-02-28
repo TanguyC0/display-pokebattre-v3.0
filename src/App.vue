@@ -23,16 +23,15 @@
 <template>
     <div class="h-full portrait:hidden">
         <Hero />
-        {{ centerDisplay }}
-        <main class="flex h-[91%]">
-            <Glass class="w-1/12 my-5 flex-col">
+        <main class="flex h-[92%]">
+            <Glass class="w-1/12 my-4 flex-col">
                 <Logo :image="'aventure'" >Adventure</Logo>
                 <Logo :image="'team'" @click="centerDisplay = 'team'" >Team</Logo>
                 <Logo :image="'bag'" @click="centerDisplay = 'bag'" >Bag</Logo>
                 <Logo :image="'shop'" @click="centerDisplay = 'shop'" >Shop</Logo>
                 <Logo :image="'box'" @click="centerDisplay = 'box'" >Box</Logo>
             </Glass>
-            <section class="grow m-5">
+            <section class="grow m-4">
                 <Team v-if="centerDisplay == 'team'" @back="(msg) => centerDisplay = msg"/>
                 <Bag v-if="centerDisplay == 'bag'" @back="(msg) => centerDisplay = msg"/>
                 <Shop v-if="centerDisplay == 'shop'" @back="(msg) => centerDisplay = msg"/>
@@ -41,7 +40,7 @@
                     <img class="max-h-1/2 h-1/2" src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/1.png" alt="">
                 </div>
             </section>
-            <Glass class="w-1/12 my-5 flex-col">
+            <Glass class="w-1/12 my-4 flex-col">
                 <Logo :image="'event'" @back="(msg) => centerDisplay = msg">Event 1</Logo>
                 <Logo :image="'event'" @back="(msg) => centerDisplay = msg">Event 2</Logo>
                 <Logo :image="'event'" @back="(msg) => centerDisplay = msg">Event 3</Logo>

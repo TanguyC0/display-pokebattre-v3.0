@@ -4,7 +4,7 @@
 </script>
 
 <template>
-        <Glass class="h-[8%]">
+        <Glass class="h-fit p-1">
             <div class="rounded-full bg-white w-14 h-14">
                 <img src="src/assets/logo/logo.png" alt="">
             </div>
