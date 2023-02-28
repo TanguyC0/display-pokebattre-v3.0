@@ -2,13 +2,14 @@
     import Glass from './Glass.vue';
     import Grid from './Grid.vue';
 
+    const emit = defineEmits(['back']);
 </script>
 
 <template>
     <Glass class="flex-col h-full px-5 py-10">
         <header class="flex w-full text-center text-3xl mb-5">
             <h1 class="grow ">Team</h1>
-            <em class="w-10 font-bold">x</em>
+            <em class="w-10 font-bold" @click="emit('back','home')">x</em>
         </header>
         <section class="flex justify-around h-full w-full">
             <section class="h-1/2 flex flex-col justify-between">
