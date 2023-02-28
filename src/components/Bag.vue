@@ -1,5 +1,6 @@
 <script setup>
     import Glass from './Glass.vue';
+    import Grid from './Grid.vue';
 
 </script>
 
@@ -10,7 +11,12 @@
             <em class="w-10 font-bold">x</em>
         </header>
         <section class="flex justify-around h-full w-full">
-            working progress
+            <section class="h-1/2 flex flex-col justify-between">
+                <div class="bg-blue-400 w-28 h-1/5 flex items-center justify-center rounded-xl border-2 text-white">grid</div>
+                <div class="bg-blue-400 w-28 h-1/5 flex items-center justify-center rounded-xl border-2 text-white">filter</div>
+                <div class="bg-blue-400 w-28 h-1/5 flex items-center justify-center rounded-xl border-2 text-white">sell</div>
+            </section>
+            <Grid :displayType="'item'"></Grid>
         </section>
     </Glass>
 

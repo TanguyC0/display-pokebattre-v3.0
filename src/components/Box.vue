@@ -11,12 +11,13 @@
             <em class="w-10 font-bold">x</em>
         </header>
         <section class="flex justify-around h-full w-full">
-            <section class="h-1/3 flex flex-col justify-between">
-                <div class="bg-blue-500 w-20 h-1/4 flex items-center justify-center rounded-xl border-2 text-white">grid</div>
-                <div class="bg-blue-500 w-20 h-1/4 flex items-center justify-center rounded-xl border-2 text-white">filter</div>
-                <div class="bg-blue-500 w-20 h-1/4 flex items-center justify-center rounded-xl border-2 text-white">sell</div>
+            <section class="h-1/2 flex flex-col justify-between">
+                <div class="bg-blue-400 w-28 h-1/5 flex items-center justify-center rounded-xl border-2 text-white">grid</div>
+                <div class="bg-blue-400 w-28 h-1/5 flex items-center justify-center rounded-xl border-2 text-white">filter</div>
+                <div class="bg-blue-400 w-28 h-1/5 flex items-center justify-center rounded-xl border-2 text-white">fav</div>
+                <div class="bg-blue-400 w-28 h-1/5 flex items-center justify-center rounded-xl border-2 text-white">sell</div>
             </section>
-            <Grid></Grid>
+            <Grid class=""></Grid>
             
             <section class=" w-2/5 bg-white text-center flex flex-col items-center">
                 <h2 class="text-3xl font-bold">data of the pokemon</h2>

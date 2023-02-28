@@ -19,23 +19,25 @@
         <Hero />
         <main class="flex h-[92%]">
             <Glass class="w-1/12 my-5 flex-col">
-                <Logo >Adventure</Logo>
-                <Logo @click="centerDisplay = 'team'">Team</Logo>
-                <Logo @click="centerDisplay = 'bag'">Bag</Logo>
-                <Logo @click="centerDisplay = 'shop'">Shop</Logo>
-                <Logo @click="centerDisplay = 'box'">Box</Logo>
+                <Logo :image="'aventure'" >Adventure</Logo>
+                <Logo :image="'team'" @click="centerDisplay = 'team'">Team</Logo>
+                <Logo :image="'bag'" @click="centerDisplay = 'bag'">Bag</Logo>
+                <Logo :image="'shop'" @click="centerDisplay = 'shop'">Shop</Logo>
+                <Logo :image="'box'" @click="centerDisplay = 'box'">Box</Logo>
             </Glass>
             <section class="grow m-5">
                 <Team v-if="centerDisplay == 'team'" />
                 <Bag v-if="centerDisplay == 'bag'" />
                 <Shop v-if="centerDisplay == 'shop'" />
                 <Box v-if="centerDisplay == 'box'" />
-                <img v-if="centerDisplay == 'home'" src="" alt="">
+                <div v-if="centerDisplay == 'home'" class="h-full flex justify-center items-center">
+                    <img  src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/1.png" alt="">
+                </div>
             </section>
             <Glass class="w-1/12 my-5 flex-col">
-                <Logo >Event 1</Logo>
-                <Logo >Event 2</Logo>
-                <Logo >Event 3</Logo>
+                <Logo :image="'event'">Event 1</Logo>
+                <Logo :image="'event'">Event 2</Logo>
+                <Logo :image="'event'">Event 3</Logo>
             </Glass>
         </main>
     </div>
