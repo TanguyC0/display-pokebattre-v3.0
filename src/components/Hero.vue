@@ -5,7 +5,7 @@
 
 <template>
         <Glass class="h-fit p-1">
-            <div class="rounded-full bg-white w-14 h-14">
+            <div class="rounded-full w-14 h-14">
                 <img src="src/assets/logo/logo.png" alt="">
             </div>
             <Jauge :color="'blue'" :pourcent="50" >level: 1 </Jauge>
