@@ -13,9 +13,9 @@
         </header>
         <section class="flex justify-around h-full w-full">
             <section class="h-1/2 flex flex-col justify-between">
-                <div class="bg-blue-400 w-28 h-1/5 flex items-center justify-center rounded-xl border-2 text-white">pokemon</div>
-                <div class="bg-blue-400 w-28 h-1/5 flex items-center justify-center rounded-xl border-2 text-white">item</div>
-                <div class="bg-blue-400 w-28 h-1/5 flex items-center justify-center rounded-xl border-2 text-white">add in team</div>
+                <div class="bg-blue-500 w-28 h-1/5 flex items-center justify-center rounded-xl border-2 text-white">pokemon</div>
+                <div class="bg-blue-500 w-28 h-1/5 flex items-center justify-center rounded-xl border-2 text-white">item</div>
+                <div class="bg-blue-500 w-28 h-1/5 flex items-center justify-center rounded-xl border-2 text-white">add in team</div>
             </section>
             <section class=" h-fit border p-6 rounded-lg">
                 <h2 class="text-3xl font-bold text-center pb-6 text-white">Team</h2>

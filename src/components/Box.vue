@@ -13,10 +13,10 @@
         </header>
         <section class="flex justify-around h-full w-full">
             <section class="h-1/2 flex flex-col justify-between">
-                <div class="bg-blue-400 w-28 h-1/5 flex items-center justify-center rounded-xl border-2 text-white">grid</div>
-                <div class="bg-blue-400 w-28 h-1/5 flex items-center justify-center rounded-xl border-2 text-white">filter</div>
-                <div class="bg-blue-400 w-28 h-1/5 flex items-center justify-center rounded-xl border-2 text-white">fav</div>
-                <div class="bg-blue-400 w-28 h-1/5 flex items-center justify-center rounded-xl border-2 text-white">sell</div>
+                <div class="bg-blue-500 w-28 h-1/5 flex items-center justify-center rounded-xl border-2 text-white">grid</div>
+                <div class="bg-blue-500 w-28 h-1/5 flex items-center justify-center rounded-xl border-2 text-white">filter</div>
+                <div class="bg-blue-500 w-28 h-1/5 flex items-center justify-center rounded-xl border-2 text-white">fav</div>
+                <div class="bg-blue-500 w-28 h-1/5 flex items-center justify-center rounded-xl border-2 text-white">sell</div>
             </section>
             <Grid class=""></Grid>
             
