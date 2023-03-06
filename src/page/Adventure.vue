@@ -23,8 +23,8 @@
             </Glass>
 
             <Glass class="h-1/2 p-4 my-4 mx-4">
-                <section class=" h-fit border p-5 rounded-lg">
-                    <img src="src/assets/map/map.jpg" alt="h-96">
+                <section class="w-[30rem] h-80 border rounded-lg bg-no-repeat bg-[url('src/assets/map/map.jpg')]">
+                    <div class=" bg-purple-500 w-5 h-5 rounded-full relative" :style="`top : ${50}%; left: ${25}%`"></div>
                 </section>
             </Glass>
 
