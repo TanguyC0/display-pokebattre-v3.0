@@ -5,9 +5,9 @@
 
 <template>
         <Glass class="h-fit p-1">
-            <div class="rounded-full w-14 h-14">
+            <router-link to="/" class="rounded-full w-14 h-14">
                 <img src="src/assets/logo/logo.png" alt="">
-            </div>
+            </router-link>
             <Jauge :color="'blue'" :pourcent="50" >level: 1 </Jauge>
             <Jauge :color="'yellow'" :pourcent="100">money: 500£ </Jauge>
             <Jauge :color="'red'" :pourcent="50">energy: 100/100 </Jauge>
