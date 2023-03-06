@@ -12,9 +12,9 @@
             <Jauge :color="'yellow'" :pourcent="100">money: 500£ </Jauge>
             <Jauge :color="'red'" :pourcent="50">energy: 100/100 </Jauge>
             <Jauge :color="'purple'" :pourcent="50">box: 10/20 </Jauge>
-            <div class="rounded-full bg-white w-14 h-14">
+            <router-link to="/dashboard" class="rounded-full bg-white w-14 h-14">
                 <img src="src/assets/logo/player.png" alt="">
-            </div>
+            </router-link>
         </Glass>
         
 
