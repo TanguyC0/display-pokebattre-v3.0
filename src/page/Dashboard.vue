@@ -1,7 +1,7 @@
 <script setup>
     import Glass from '../components/Glass.vue';
     import DashboardUser from '../components/DashboardUser.vue';
-    // import DashboardAdmin from '../components/DashboardAdmin.vue';
+    import DashboardAdmin from '../components/DashboardAdmin.vue';
     // import DashboardItem from '../components/DashboardItem.vue';
     // import DashboardStage from '../components/DashboardStage.vue';
     import { ref } from 'vue';
