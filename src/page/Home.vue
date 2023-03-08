@@ -6,7 +6,17 @@
     import Shop from '../components/Shop.vue';
     import Box from '../components/Box.vue';
 
-    import { ref } from 'vue';
+    import { ref,reactive, onMounted } from 'vue';
+    import { i18nextPromise } from '../i18n.js'
+
+    const languages = reactive({
+        en: { nativeName: 'English', code: 'en' },
+        fr: { nativeName: 'Français', code: 'fr' },
+    });
+
+    onMounted(async () => {
+        await i18nextPromise
+    })
 
     const centerDisplay = ref('home');
 
@@ -16,12 +26,12 @@
     
         <Glass class="w-1/12 my-4 flex-col">
             <router-link to="/adventure">
-                <Logo :image="'aventure'" >Adventure</Logo>
+                <Logo :image="'aventure'" >{{ $t('menu.adventure') }}</Logo>
             </router-link>
-            <Logo :image="'team'" @click="centerDisplay = 'team'" >Team</Logo>
-            <Logo :image="'bag'" @click="centerDisplay = 'bag'" >Bag</Logo>
-            <Logo :image="'shop'" @click="centerDisplay = 'shop'" >Shop</Logo>
-            <Logo :image="'box'" @click="centerDisplay = 'box'" >Box</Logo>
+            <Logo :image="'team'" @click="centerDisplay = 'team'" >{{ $t('menu.team') }}</Logo>
+            <Logo :image="'bag'" @click="centerDisplay = 'bag'" >{{ $t('menu.bag') }}</Logo>
+            <Logo :image="'shop'" @click="centerDisplay = 'shop'" >{{ $t('menu.shop') }}</Logo>
+            <Logo :image="'box'" @click="centerDisplay = 'box'" >{{ $t('menu.box') }}</Logo>
         </Glass>
         <section class="grow m-4">
             <Team v-if="centerDisplay == 'team'" @back="(msg) => centerDisplay = msg"/>

@@ -1,0 +1,9 @@
+{
+    "menu":{
+        "adventure":"Aventure",
+        "team":"equipe",
+        "box":"boite",
+        "shop":"magasin",
+        "bag":"sac"
+    }
+}
