@@ -4,7 +4,12 @@
     import DashboardAdmin from '../components/DashboardAdmin.vue';
     import DashboardItem from '../components/DashboardItem.vue';
     import DashboardStage from '../components/DashboardStage.vue';
-    import { ref } from 'vue';
+    import { ref, onMounted } from 'vue';
+    import { i18nextPromise } from '../i18n.js'
+
+    onMounted(async () => {
+        await i18nextPromise
+    })
 
     const page = ref('user data');
 </script>
@@ -14,16 +19,16 @@
         <nav class="w-full mb-5">
             <ul class="flex flex-row justify-around text-white">
                 <li @click="page = 'user data'" :class="{'underline' : page == 'user data'? true : false}">
-                    user data
+                    {{$t('dashboard.user')}}
                 </li>
                 <li @click="page = 'admin user'" :class="{'underline' : page == 'admin user'? true : false}">
-                    admin user
+                    {{$t('dashboard.admin')}}
                 </li>
                 <li @click="page = 'admin item'" :class="{'underline' : page == 'admin item'? true : false}">
-                    admin item
+                    {{$t('dashboard.item')}}
                 </li>
                 <li @click="page = 'admin stage'" :class="{'underline' : page == 'admin stage'? true : false}">
-                    admin stage
+                    {{$t('dashboard.stage')}}
                 </li>
             </ul>
         </nav>

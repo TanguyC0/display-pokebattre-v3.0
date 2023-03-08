@@ -6,13 +6,8 @@
     import Shop from '../components/Shop.vue';
     import Box from '../components/Box.vue';
 
-    import { ref,reactive, onMounted } from 'vue';
+    import { ref, onMounted } from 'vue';
     import { i18nextPromise } from '../i18n.js'
-
-    const languages = reactive({
-        en: { nativeName: 'English', code: 'en' },
-        fr: { nativeName: 'Français', code: 'fr' },
-    });
 
     onMounted(async () => {
         await i18nextPromise

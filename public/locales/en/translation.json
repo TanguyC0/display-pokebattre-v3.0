@@ -5,5 +5,17 @@
         "box":"Box",
         "shop":"Shop",
         "bag":"Bag"
+    },
+    "hero":{
+        "level":"Level",
+        "money":"Money",
+        "energy":"Energy",
+        "box":"Box"
+    },
+    "dashboard":{
+        "user":" Data User",
+        "admin":" Admin-Panel",
+        "item":"Admin-Item",
+        "stage":"Admin-Stage"
     }
 }

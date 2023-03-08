@@ -5,5 +5,17 @@
         "box":"boite",
         "shop":"magasin",
         "bag":"sac"
+    },
+    "hero":{
+        "level":"Niveau",
+        "money":"Argent",
+        "energy":"Energie",
+        "box":"Boite"
+    },
+    "dashboard":{
+        "user":"Donnée utilisateur",
+        "admin":"tableau Admin",
+        "item":"Admin-object",
+        "stage":"Admin-niveau"
     }
 }

@@ -1,6 +1,16 @@
 <script setup>
-    import { ref } from 'vue';
     import { choseBgColor } from '../utils/choseColor.js';
+    import { ref,reactive, onMounted } from 'vue';
+    import { i18nextPromise } from '../i18n.js'
+
+    const languages = reactive({
+        en: { nativeName: 'English', code: 'en' },
+        fr: { nativeName: 'Français', code: 'fr' },
+    });
+
+    onMounted(async () => {
+        await i18nextPromise
+    })
 
     const nbAvatar = ref(20);
     const lstColor = ref(['red','blue','green','yellow','purple','pink','orange','gray','black','white']);
@@ -23,12 +33,12 @@
                     </label>
                     <div class="w-1/2 flex justify-between p-2">
                         <span class="w-1/4 text-left">langue</span>
-                        <label for="fr" class="border border-2 rounded-full" :class="{'border-red-500' : false}">
+                        <label for="fr" class="border border-2 rounded-full" :class="{'border-red-500' : false}" @click="$i18next.changeLanguage('fr')">
                             <img src="src/assets/flag/fr.png" alt="fr" class="h-16 w-16">
                             <input type="radio" name="lng" id="fr" class="hidden">
                         </label>
                         
-                        <label for="en" class="border border-2 rounded-full" :class="{'border-red-500' : true}">
+                        <label for="en" class="border border-2 rounded-full" :class="{'border-red-500' : true}" @click="$i18next.changeLanguage('en')">
                             <img src="src/assets/flag/en.png" alt="en" class="h-16 w-16">
                             <input type="radio" name="lng" id="en" class="hidden">
                         </label>
