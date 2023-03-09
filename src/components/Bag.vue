@@ -1,7 +1,12 @@
 <script setup>
     import Glass from './Glass.vue';
     import Grid from './Grid.vue';
-    import { defineEmits } from 'vue';
+    import { defineEmits, onMounted } from 'vue';
+    import { i18nextPromise } from '../i18n.js'
+
+    onMounted(async () => {
+        await i18nextPromise
+    })
 
     const emit = defineEmits(['back']);
 
@@ -11,14 +16,14 @@
     
     <Glass class="flex-col h-full px-5 py-10">
         <header class="flex w-full text-center text-3xl mb-5">
-            <h1 class="grow ">Bag</h1>
+            <h1 class="grow ">{{ $t('menu.bag') }}</h1>
             <em class="w-10 font-bold text-white" @click="emit('back','home')">x</em>
         </header>
         <section class="flex justify-around h-full w-full">
             <section class="h-1/2 flex flex-col justify-between">
                 <div class="bg-blue-500 w-28 h-1/5 flex items-center justify-center rounded-xl border-2 text-white">grid</div>
-                <div class="bg-blue-500 w-28 h-1/5 flex items-center justify-center rounded-xl border-2 text-white">filter</div>
-                <div class="bg-blue-500 w-28 h-1/5 flex items-center justify-center rounded-xl border-2 text-white">sell</div>
+                <div class="bg-blue-500 w-28 h-1/5 flex items-center justify-center rounded-xl border-2 text-white">{{ $t('interface.filter') }}</div>
+                <div class="bg-blue-500 w-28 h-1/5 flex items-center justify-center rounded-xl border-2 text-white">{{ $t('interface.sell') }}</div>
             </section>
             <Grid :displayType="'item'"></Grid>
         </section>

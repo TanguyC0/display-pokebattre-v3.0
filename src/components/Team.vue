@@ -1,6 +1,12 @@
 <script setup>
     import Glass from './Glass.vue';
     import Grid from './Grid.vue';
+    import { defineEmits, onMounted } from 'vue';
+    import { i18nextPromise } from '../i18n.js'
+
+    onMounted(async () => {
+        await i18nextPromise
+    })
 
     const emit = defineEmits(['back']);
 </script>
@@ -8,17 +14,17 @@
 <template>
     <Glass class="flex-col h-full px-5 py-10">
         <header class="flex w-full text-center text-3xl mb-5">
-            <h1 class="grow ">Team</h1>
+            <h1 class="grow ">{{ $t('menu.team') }}</h1>
             <em class="w-10 font-bold" @click="emit('back','home')">x</em>
         </header>
         <section class="flex justify-around h-full w-full">
             <section class="h-1/2 flex flex-col justify-between">
                 <div class="bg-blue-500 w-28 h-1/5 flex items-center justify-center rounded-xl border-2 text-white">pokemon</div>
-                <div class="bg-blue-500 w-28 h-1/5 flex items-center justify-center rounded-xl border-2 text-white">item</div>
-                <div class="bg-blue-500 w-28 h-1/5 flex items-center justify-center rounded-xl border-2 text-white">add in team</div>
+                <div class="bg-blue-500 w-28 h-1/5 flex items-center justify-center rounded-xl border-2 text-white">{{ $t('interface.item') }}</div>
+                <div class="bg-blue-500 w-28 h-1/5 flex items-center justify-center rounded-xl border-2 text-white">{{ $t('interface.add') }}</div>
             </section>
             <section class=" h-fit border p-6 rounded-lg">
-                <h2 class="text-3xl font-bold text-center pb-6 text-white">Team</h2>
+                <h2 class="text-3xl font-bold text-center pb-6 text-white">{{ $t('interface.team') }}</h2>
                 <ul class="grid grid-cols-3 gap-4 wrap ">
                     <template v-for="n in 6">
                         <li class="h-32 w-32 hover:bg-violet-300 bg-white border border-gray-300 rounded-lg shadow  active:bg-violet-800 focus:outline-none focus:ring focus:ring-violet-500 ">
@@ -27,7 +33,7 @@
                     </template>
                 </ul>
             </section>
-            <Grid>Box</Grid>
+            <Grid>{{ $t('interface.box') }}</Grid>
         </section>
     </Glass>
 

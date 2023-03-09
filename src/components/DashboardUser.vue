@@ -12,6 +12,8 @@
         await i18nextPromise
     })
 
+    // get the current language
+
     const nbAvatar = ref(20);
     const lstColor = ref(['red','blue','green','yellow','purple','pink','orange','gray','black','white']);
 </script>
@@ -33,12 +35,12 @@
                     </label>
                     <div class="w-1/2 flex justify-between p-2">
                         <span class="w-1/4 text-left">langue</span>
-                        <label for="fr" class="border border-2 rounded-full" :class="{'border-red-500' : false}" @click="$i18next.changeLanguage('fr')">
+                        <label for="fr" class="border border-2 rounded-full" :class="{'border-red-500' : $i18next.resolvedLanguage=='fr'?true:false }" @click="$i18next.changeLanguage('fr')">
                             <img src="src/assets/flag/fr.png" alt="fr" class="h-16 w-16">
                             <input type="radio" name="lng" id="fr" class="hidden">
                         </label>
                         
-                        <label for="en" class="border border-2 rounded-full" :class="{'border-red-500' : true}" @click="$i18next.changeLanguage('en')">
+                        <label for="en" class="border border-2 rounded-full" :class="{'border-red-500' : $i18next.resolvedLanguage=='en'?true:false}" @click="$i18next.changeLanguage('en')">
                             <img src="src/assets/flag/en.png" alt="en" class="h-16 w-16">
                             <input type="radio" name="lng" id="en" class="hidden">
                         </label>

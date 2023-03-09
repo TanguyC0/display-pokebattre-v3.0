@@ -1,10 +1,11 @@
 {
     "menu":{
         "adventure":"Aventure",
-        "team":"equipe",
-        "box":"boite",
-        "shop":"magasin",
-        "bag":"sac"
+        "team":"Equipe",
+        "box":"Boite",
+        "shop":"Magasin",
+        "bag":"Sac",
+        "event":"Evenement"
     },
     "hero":{
         "level":"Niveau",
@@ -17,5 +18,28 @@
         "admin":"tableau Admin",
         "item":"Admin-object",
         "stage":"Admin-niveau"
+    },
+    "interface":{
+        "team":"Equipe",
+        "box":"Boite",
+        "item":"Objet",
+        "bag" : "Sac",
+        "stock":"Stock",
+        "add":"Ajouter dans l'équipe",
+        "filter":"Filtre",
+        "sell":"Vendre",
+        "buy":"Acheter",
+        "buyAll":"Acheter tout",
+        "fav":"Favoris",
+        "data":{
+            "title":"Donnée du pokemon",
+            "attack":"Attaque",
+            "defense":"Defense",
+            "hp":"PV",
+            "exp":"EXP",
+            "price":"Prix",
+            "level":"Niveau",
+            "type":"Types"
+        }
     }
 }

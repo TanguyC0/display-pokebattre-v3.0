@@ -4,7 +4,8 @@
         "team":"Team",
         "box":"Box",
         "shop":"Shop",
-        "bag":"Bag"
+        "bag":"Bag",
+        "event":"Event"
     },
     "hero":{
         "level":"Level",
@@ -17,5 +18,28 @@
         "admin":" Admin-Panel",
         "item":"Admin-Item",
         "stage":"Admin-Stage"
+    },
+    "interface":{
+        "team":"Team",
+        "box":"Box",
+        "item":"Item",
+        "bag":"Bag",
+        "stock":"Stock",
+        "add":"Add in team",
+        "filter":"Filter",
+        "sell":"Sell",
+        "buy":"Buy",
+        "buyAll":"Buy All",
+        "fav":"Favorite",
+        "data":{
+            "title":"Data of the pokemon",
+            "attack":"Attack",
+            "defense":"Defense",
+            "hp":"HP",
+            "exp":"EXP",
+            "price":"Price",
+            "level":"Level",
+            "type":"Types"
+        }
     }
 }
